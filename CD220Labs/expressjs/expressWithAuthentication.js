@@ -90,4 +90,4 @@ app.get("/auth/get_message", (req, res) => {
 
 const PORT = 5000; // Define the port number
 
-app.listen(PORT, () => console.log("Server is running")); // Start the server and listen on the specified port
+app.listen(PORT, () => console.log("Listening at http://localhost:5000")); // Start the server and listen on the specified port
