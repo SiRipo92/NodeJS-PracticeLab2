@@ -4,7 +4,7 @@ const express = require('express');
 // Create an instance of an Express application
 const app = new express();
 
-// Create routers for users and items
+// Create routers for handling users and items separately
 let userRouter = express.Router();
 let itemRouter = express.Router();
 
@@ -14,7 +14,8 @@ userRouter.use(function (req, res, next) {
     next();
 });
 
-// Route to handle user requests with ID parameter
+// Route to handle user requests with ID parameter (end-point)
+// These routers send responses with formatted messages including ID and current date
 userRouter.get('/:id', function (req, res, next) {
     res.send("User " + req.params.id + " last successful login " + Date());
 });
@@ -25,7 +26,8 @@ itemRouter.use(function (req, res, next) {
     next();
 });
 
-// Route to handle item requests with ID parameter
+// Route to handle item requests with ID parameter (end-point)
+// These routers send responses with formatted messages including ID and current date
 itemRouter.get('/:id', function (req, res, next) {
     res.send("Item " + req.params.id + " last enquiry " + Date());
 });
