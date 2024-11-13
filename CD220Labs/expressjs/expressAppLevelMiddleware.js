@@ -18,6 +18,7 @@ app.use(function (req, res, next) {
 });
 
 // Define a route for the /home path
+    // The ONLY endpoint for this server
 app.get("/home", (req, res) => {
     // Send a "Hello World!" message as a response
     return res.send("Hello World!");
